@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang=es><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>
+<title>INERTIX frente a ANSYS</title>
+<meta name=description content='Comparación de INERTIX 1.5.0 con ANSYS 2025 R1 en cimentaciones y propiedades de secciones.'>
+<link rel=icon href='logo.png'>
+<style>
+:root{--azul:#073964;--naranja:#EB580D;--tx:#172033;--sub:#5a6272;--borde:#d5d9e0;--fondo:#f5f7fa;--tarjeta:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--azul:#9db4ff;--tx:#e6e9ef;--sub:#a3abb9;--borde:#3a4150;
+--fondo:#14171d;--tarjeta:#1d222b}}
+*{box-sizing:border-box}body{margin:0;background:var(--fondo);color:var(--tx);font:16px/1.55 system-ui,Segoe UI,Roboto,sans-serif}
+header{background:#fff;border-bottom:4px solid var(--naranja)}
+.cab{max-width:1040px;margin:0 auto;padding:28px 16px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.cab img{width:96px;height:96px}
+.cab .nombre{color:#073964;font-weight:800;font-size:30px;letter-spacing:.08em;line-height:1}
+.cab .lema{color:#5a6272;font-size:15px;margin-top:6px}
+main{max-width:1040px;margin:0 auto;padding:28px 16px 40px}
+h1{font-size:26px;line-height:1.25;margin:0 0 10px}
+.intro{color:var(--sub);max-width:780px;margin:0 0 26px}
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:18px}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--borde);border-top:4px solid var(--azul);border-radius:10px;padding:20px}
+.tarjeta h2{margin:0 0 8px;font-size:21px;color:var(--azul)}.tarjeta p{margin:0 0 10px}
+.datos{margin:0 0 16px;padding-left:20px;color:var(--sub);font-size:14px}
+.botones{display:flex;flex-direction:column;gap:8px}
+.botones a{display:block;text-align:center;text-decoration:none;border:1px solid var(--azul);color:var(--azul);
+border-radius:8px;padding:10px 12px;font-weight:600}
+.botones a.principal{background:#073964;border-color:#073964;color:#fff}
+.metodo{margin-top:30px;background:var(--tarjeta);border:1px solid var(--borde);border-radius:10px;padding:18px 20px}
+.metodo h2{font-size:18px;margin:0 0 8px}.metodo ul{margin:0;padding-left:20px}
+footer{border-top:1px solid var(--borde);color:var(--sub);font-size:13px;text-align:center;padding:18px 16px}
+</style></head><body>
+<header><div class=cab><img src='logo.png' alt='Logo de INERTIX'><div><div class=nombre>INERTIX</div></div></div></header>
+<main>
+<h1>Validación de INERTIX 1.5.0 frente a ANSYS 2025 R1</h1>
+<p class=intro>Los mismos modelos resueltos en los dos programas. Cada comparación muestra la imagen que exporta ANSYS
+junto a la que dibuja INERTIX, con las diferencias numéricas de cada caso.</p>
+<div class=tarjetas>
+<section class=tarjeta><h2>Cimentaciones</h2><p>Zapatas y modelado general de cimentaciones como láminas sobre resortes del suelo.</p><ul class=datos><li>102 casos: zapatas aisladas, combinadas y corridas; losas, vigas, muros y huecos</li><li>ANSYS: SHELL181 (lámina gruesa) y SHELL63 (lámina delgada)</li><li>Mismo modelo discreto: misma malla, mismos resortes y mismas cargas</li></ul><div class=botones><a class=principal href='cimentaciones/3_ansys_e_inertix.html'>ANSYS e INERTIX, lado a lado</a><a href='cimentaciones/1_ansys.html'>Solo ANSYS</a><a href='cimentaciones/2_inertix.html'>Solo INERTIX</a></div></section><section class=tarjeta><h2>Propiedades de secciones</h2><p>Propiedades geométricas, torsión, alabeo y esfuerzos en secciones de uno y varios materiales.</p><ul class=datos><li>13 secciones, con y sin materiales</li><li>ANSYS: sección mallada con PLANE183 y viga BEAM189</li><li>Área, inercias, J, Cw, centro de cortante y mapas de esfuerzos</li></ul><div class=botones><a class=principal href='propiedades/3_ansys_e_inertix.html'>ANSYS e INERTIX, lado a lado</a><a href='propiedades/1_ansys.html'>Solo ANSYS</a><a href='propiedades/2_inertix.html'>Solo INERTIX</a></div></section>
+</div>
+<section class=metodo><h2>Cómo se hizo la comparación</h2><ul>
+<li>Las imágenes de ANSYS son las que exporta ANSYS 2025 R1 (Student), sin editar.</li>
+<li>Las imágenes de INERTIX las dibuja su propio visor de resultados con el resultado de su motor de cálculo.</li>
+<li>Cada página detalla el modelo, las unidades y la forma en que se mide la diferencia.</li>
+</ul></section>
+</main>
+<footer>INERTIX · Comparación con ANSYS 2025 R1 · ANSYS es una marca de sus respectivos titulares.</footer>
+</body></html>
